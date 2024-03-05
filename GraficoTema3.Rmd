@@ -1,6 +1,8 @@
 ---
 title: "GraficoTema3 GrupoI"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 date: "2024-02-25"
 ---
 
@@ -59,6 +61,7 @@ grafico_covid <- ggplot(selected_data, aes(x = date, y = deaths_per_million, col
     plot.caption = element_text(hjust = 0, color = "#818181")
   )
 
+grafico_covid
 
 
 
