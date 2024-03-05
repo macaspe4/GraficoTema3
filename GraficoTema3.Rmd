@@ -31,7 +31,17 @@ selected_data <- covid_data %>%
   filter(location %in% selected_countries) %>%
   rename(country = location, deaths_per_million = new_deaths_smoothed_per_million)
 
-#hsfhqsf
+country_colors <- c(
+  "United States" = "#7A4C9A",
+  "Italy" = "#2B938D",
+  "France" = "#B03608",
+  "Germany" = "#399C66",
+  "Canada" = "#88313A",
+  "Japan" = "#47566E",
+  "United Kingdom" = "#D42773",
+  "Spain" =  "red"
+)
+
 
 
 
