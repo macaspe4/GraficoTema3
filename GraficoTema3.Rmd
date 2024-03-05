@@ -22,5 +22,8 @@ library(dplyr)
 library(extrafont)
 library(stringr)
 
+loadfonts(device = "win", quiet = TRUE)
+covid_data <- read_csv("./data/owid-covid-data.csv", col_types = cols(date = col_date(format = "%Y-%m-%d")))
+
 ```
 
