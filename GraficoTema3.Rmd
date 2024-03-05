@@ -39,6 +39,7 @@ selected_data <- covid_data %>%
   filter(location %in% selected_countries) %>%
   rename(country = location, deaths_per_million = new_deaths_smoothed_per_million)
 
+#Coloreamos con los códigos de R
 country_colors <- c(
   "United States" = "#7A4C9A",
   "Italy" = "#2B938D",
@@ -50,6 +51,7 @@ country_colors <- c(
   "Spain" =  "red"
 )
 
+#Creamos el gráfico, y añadimos todos los parámetros necesarios para que se asemeje al gráfico dado
 grafico_covid <- ggplot(selected_data, aes(x = date, y = deaths_per_million, color = country, group = country)) + 
   geom_line(data = filter(selected_data, country == "Spain"), size = 1) + 
   geom_path() + 
@@ -66,11 +68,14 @@ grafico_covid <- ggplot(selected_data, aes(x = date, y = deaths_per_million, col
     plot.subtitle = element_text(color = "#818181"),
     plot.caption = element_text(hjust = 0, color = "#818181")
   )
-
+#Mostramos el gráfico
 grafico_covid
 
+#Convertimos el gráfico estándar en un gráfico interactivo
 grafico_interactivo <- ggplotly(grafico_covid) %>%
   layout(plot_bgcolor = "white", paper_bgcolor = "white")
+
+#Lo mostramos y comprobamos que, efectivamente, funciona
 grafico_interactivo
 
 
