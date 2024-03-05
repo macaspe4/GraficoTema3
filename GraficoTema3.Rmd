@@ -8,4 +8,19 @@ date: "2024-02-25"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
- 
+
+
+
+```{r}
+library(tidyverse)
+library(knitr)
+library(htmltools)
+library(plotly)
+library(ggplot2)
+library(datasets)
+library(dplyr)
+library(extrafont)
+library(stringr)
+
+```
+
