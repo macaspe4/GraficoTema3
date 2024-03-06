@@ -1,8 +1,8 @@
 ---
 title: "GraficoTema3 GrupoI"
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 date: "2024-02-25"
 ---
 
@@ -72,11 +72,11 @@ grafico_covid <- ggplot(selected_data, aes(x = date, y = deaths_per_million, col
 grafico_covid
 
 #Convertimos el gráfico estándar en un gráfico interactivo
-grafico_interactivo <- ggplotly(grafico_covid) %>%
-  layout(plot_bgcolor = "white", paper_bgcolor = "white")
+#grafico_interactivo <- ggplotly(grafico_covid) %>%
+  #layout(plot_bgcolor = "white", paper_bgcolor = "white")
 
 #Lo mostramos y comprobamos que, efectivamente, funciona
-grafico_interactivo
+#grafico_interactivo
 
 
 
